@@ -20,5 +20,9 @@
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8"
+  },
+  "dependencies": {
+    "bootstrap4-less": "^4.0.0-alpha.6.2",
+    "gulp-less": "^4.0.0"
   }
 }

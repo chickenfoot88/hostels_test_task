@@ -1,0 +1,267 @@
+@import "_vars";
+@import "_fonts";
+@import "_libs";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: @accent-orange;
+	color: #fff;
+}
+
+html, body {
+	height: 100%
+}
+
+body {
+	font-size: 14px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.65;
+	font-family: @default-font;
+	overflow-x: hidden;
+	color: #fff;
+	input, textarea {
+			border: #666 1px solid;
+			outline: none;
+			&:focus:required:invalid {
+				border-color: red;
+			}
+			&:required:valid {
+				border-color: green;
+			}
+	}
+}
+
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+//top line
+.top-line-wrapper {
+	background: @accent-blue;
+}
+
+.top-line {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+
+	a {
+		height: 40px;
+		text-decoration: none;
+		display: block;
+		padding: 14px 10px;
+		line-height: 1;
+	}
+
+}
+
+.top-menu {
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+
+	li {
+		text-transform: uppercase;
+		font-weight: bold;
+		display: inline-block;
+		list-style: none;
+		font-size: 13px;
+		a {
+			color: #fff;
+			transition: background .2s ease;
+		}
+
+		.svg-inline--fa {
+			margin-left: 5px;
+		}
+	}
+
+	li:hover {
+		a {
+			background: #f75c00;
+		}
+	}
+
+	&_2nd-lvl {
+		display: none;
+	}
+}
+
+.sign-in-link {
+	.svg-inline--fa {
+		margin-right: 10px;
+	}
+
+	a {
+		color: @text-blue;
+		text-decoration: underline;
+		transition: color .2s ease
+	}
+
+	a:hover {
+		color: #fff;
+	}
+}
+
+//search block
+.search-block-wrapper {
+	padding: 50px 0 55px;
+	background: #0085c5;
+}
+
+h1 {
+	text-align: center;
+	font-weight: normal;
+	font-size: 24px;
+	padding-bottom: 50px;
+}
+
+.searc-form {
+	.form-group-wrapper {
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		padding-bottom: 20px;
+	}
+
+	.search-form-change {
+		display: flex;
+		align-items: center;
+		&_btn {
+			width: 55px;
+			background: url('../img/change.png') no-repeat center;
+			border: none;
+			padding: 10px;
+			height: 55px;
+			cursor: pointer;
+		}
+	}
+}
+
+.searc-form-group {
+	flex-grow: 1;
+
+	label {
+		display: block;
+		margin-bottom: 4px;
+	}
+
+	.searc-form-input {
+		border-radius: 7px;
+		padding: 14px;
+		width: 100%;
+		border-color: @border-color;
+
+		&::placeholder {
+			font-size: 16px;
+		}
+	}
+
+	.help-block {
+		margin-top: 3px;
+		margin-bottom: 0;
+		color: @text-blue-alt;
+
+		.example-city {
+			margin-left: 3px;
+			position: relative;
+			color: @text-blue-alt;
+			text-decoration: none;
+
+			&::after {
+				position: absolute;
+				content: '';
+				width: 100%;
+				bottom: -1px	;
+				left: 0;
+				right: 0;
+				border-bottom: 1px dashed @text-blue;
+			}
+		}
+
+		.example-city:hover {
+			color: #fff;
+
+			&::after {
+				display: none;
+			}
+		}
+
+	}
+}
+
+.searc-form-group-roundtrip {
+	display: flex;
+	align-items: flex-end;
+
+	> div:first-child {
+		height: 53px;
+		display: flex;
+		align-items: center;
+	}
+
+	.roundtrip-label {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		margin: 0 15px;
+		padding: 5px 10px;
+		border-radius: 7px;
+		background: lighten(@dark-blue, 5%);
+		position: relative;
+
+		.svg-inline--fa {
+			position: absolute;
+			right: -9px;
+			color: lighten(@dark-blue, 5%);
+			font-size: 24px;
+		}
+
+		.roundtrip-checkbox {
+			display: none;
+		}
+
+		.roundtrip-checkbox-custom {
+			position: relative;
+			background: #fff;
+			width: 18px;
+			height: 18px;
+			border-radius: 4px;
+			box-shadow: 0 1px 3px #333 inset;
+			margin-right: 5px;
+		}
+
+		.roundtrip-checkbox:checked + .roundtrip-checkbox-custom::before {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 2px;
+			right: 2px;
+			bottom: 2px;
+			left: 2px;
+			background: url("../img/checked.png") no-repeat center;
+			background-size: 75%;
+		}
+	}
+}
+
+.search-btn {
+	width: 100%;
+	padding: 14px;
+	background: linear-gradient(#fbae4b 1%, #fa8c2c 50%, #f76105 100%);
+	border: 1px solid darken(@accent-orange, 20%);
+	border-radius: 3px;
+	box-shadow: 0 1px 0 #fcc272 inset;
+}
+
+@import "_media"; // Always at the end

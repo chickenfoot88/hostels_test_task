@@ -1,4 +1,4 @@
-var syntax        = 'sass'; // Syntax: sass or scss;
+var syntax        = 'less'; // Syntax: sass or scss;
 
 var gulp          = require('gulp'),
 		gutil         = require('gulp-util' ),
@@ -11,6 +11,7 @@ var gulp          = require('gulp'),
 		autoprefixer  = require('gulp-autoprefixer'),
 		notify        = require("gulp-notify"),
 		rsync         = require('gulp-rsync');
+		less          = require('gulp-less');
 
 gulp.task('browser-sync', function() {
 	browsersync({
@@ -25,8 +26,8 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('styles', function() {
-	return gulp.src('app/'+syntax+'/**/*.'+syntax+'')
-	.pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
+	return gulp.src('app/less/main.less')
+	.pipe(less({ outputStyle: 'expand' }).on("error", notify.onError()))
 	.pipe(rename({ suffix: '.min', prefix : '' }))
 	.pipe(autoprefixer(['last 15 versions']))
 	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
@@ -37,6 +38,7 @@ gulp.task('styles', function() {
 gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/fontawesome-free-5.0.10/svg-with-js/js/fontawesome-all.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
