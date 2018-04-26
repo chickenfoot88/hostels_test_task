@@ -45,6 +45,13 @@ body {
 	text-align: center;
 }
 
+//button
+button {
+	&:focus {
+		outline: none;
+	}
+}
+
 //top line
 .top-line-wrapper {
 	background: @accent-blue;
@@ -88,7 +95,7 @@ body {
 	}
 
 	li:hover,
-	li.active {
+	li.show {
 		> a {
 			background: #f75c00;
 		}
@@ -96,16 +103,29 @@ body {
 }
 
 //dropdown
+.navbar-nav {
+	li:hover > .dropdown-menu {
+		display: block;
+	}
+}
+
 .dropdown-menu {
 	padding: 0;
-	border-radius: none;
+	border-radius: 0;
 	margin: 0;
+	border: 1px solid #d7d7d7;
+	border-top: none;
 
 	a.dropdown-item {
 		background: #fff;
 		color: #000;
 		font-weight: normal;
 		text-transform: none;
+		border-bottom: 1px solid #d7d7d7;
+
+		&:last-child {
+			border: none;
+		}
 
 		&:hover {
 			background: #bfd8eb;
@@ -119,6 +139,8 @@ body {
 	border-top-width: 0.3105rem;
 	margin-left: 0.5rem;
 }
+
+
 
 
 .sign-in-link {
@@ -169,6 +191,15 @@ h1 {
 			padding: 10px;
 			height: 55px;
 			cursor: pointer;
+			transition: background-image .1s ease
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			.search-form-change_btn {
+				background-image: url('../img/change-active.png');
+			}
 		}
 	}
 }
@@ -259,6 +290,7 @@ h1 {
 		border-radius: 5px;
 		background: lighten(@dark-blue, 5%);
 		position: relative;
+		user-select: none;
 
 		.svg-inline--fa {
 			position: absolute;
@@ -401,20 +433,14 @@ h1 {
 	color: #fff;
 	font-size: 16px;
 	cursor: pointer;
-	outline: none;
 
 	&:hover {
 		background: linear-gradient(lighten(#fbae4b, 10%) 1%, #fa8c2c 50%, #f76105 96%, #fbae4b 100%);
 	}
 
 	&:active {
-		outline: none;
 		box-shadow: 0 2px 4px #393939 inset;
 		border: none;
-	}
-
-	&:focus {
-		outline: none;
 	}
 
 	img {
