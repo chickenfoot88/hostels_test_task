@@ -39,6 +39,10 @@ gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/fontawesome-free-5.0.10/svg-with-js/js/fontawesome-all.min.js',
+		'app/libs/jQueryFormStyler/dist/jquery.formstyler.js',
+		'app/libs/jqueryUi/jquery-ui.min.js',
+		'app/libs/bootstrap/popper.min.js',
+		'app/libs/bootstrap/bootstrap.bundle.min.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
