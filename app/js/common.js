@@ -25,7 +25,7 @@ $(function() {
 	};
 
 	$(document).ready(function() {
-		disableDatepicker($('#roundtrip-checkbox'));
+		disableDatepicker($('#roundtrip-checkbox')[0]);
 	});
 
 	$('#roundtrip-checkbox').on('change', function() {
@@ -54,7 +54,7 @@ $(function() {
 	$("#my-menu").mmenu({
 		extensions : ['theme-white', 'effect-menu-slide', 'pagedim-black' ],
 			navbar: {
-				title: "Меню"
+				title: "Menu"
 			}
 	});
 

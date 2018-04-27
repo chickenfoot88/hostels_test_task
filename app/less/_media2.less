@@ -1,5 +1,9 @@
 @media all and (max-width: 992px) {
-  /**/
+  .top-menu {
+    li {
+      font-size: 11px;
+    }
+  }
 }
 
 @media all and (max-width: 768px) {
@@ -14,19 +18,35 @@
   .hamburger {
     display: flex !important;
   }
+
 }
 
 @media all and (max-width: 576px) {
-  .search-form {
-    .search-form-group,
-    .search-form-change {
-      padding-bottom: 0;
+  .search-form-group-roundtrip {
+    .roundtrip-label {
+      margin: 0;
+      margin-left: 15px;
+    }
+
+    .svg-inline--fa {
+      left: -8px;
+      right: 0;
+      transform: rotate(180deg);
     }
   }
 }
 
-@media all and (min-width: 768px) {
-  .top-menu li a {
-    font-size: 12px;
+@media all and (max-width: 480px) {
+  .search-form {
+    .form-group-wrapper {
+      .search-form-group {
+        flex-basis: 100%;
+      }
+    }
   }
+
+}
+
+
+@media all and (min-width: 768px) {
 }

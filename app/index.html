@@ -100,19 +100,19 @@
 						<div class="col-xl-12">
 							<form action="" id="search-form" class="search-form">
 								<div class="row no-gutters">
-									<div class="col-12 col-sm-11 col-md">
+									<div class="col-12 col-md">
 										<div class="search-form-group">
 											<label for="departure-city">Departure city:</label>
 											<input id="departure-city" type="text" class="search-form-input" placeholder="Type city name">
 											<p class="help-block">Ex: <a href="" class="example-city">St.Petersburg</a><b>,</b><a href="" class="example-city">Moscow</a></p>
 										</div>
 									</div>
-									<div class="col-12 col-sm-1 d-flex">
+									<div class="col-12  col-md-1 d-flex">
 										<div class="search-form-change justify-content-end justify-content-md-center">
 											<button class="search-form-change_btn" type="button"></button>
 										</div>
 									</div>
-									<div class="col-12 col-sm-11 col-md">
+									<div class="col-12 col-md">
 										<div class="search-form-group">
 											<label for="arrival-city">Arrival city:</label>
 											<input id="arrival-city" type="text" class="search-form-input" placeholder="Type city name">
@@ -121,24 +121,29 @@
 									</div>
 								</div>
 								<div class="form-group-wrapper">
-									<div class="search-form-group">
-										<label for="departure-date">Departure date:</label>
-										<input id="departure-date" type="text" class="search-form-input search-form-datepicker" placeholder="dd.mm.yyyy">
-									</div>
-									<div class="search-form-group search-form-group-roundtrip">
-										<div>
-											<label class="roundtrip-label">
-												<input id="roundtrip-checkbox" type="checkbox" class="roundtrip-checkbox">
-												<span class="roundtrip-checkbox-custom"></span>
-												Roundtrip
-												<i class="fa fa-caret-right"></i>
-											</label>
-										</div>
-										<div>
-											<label for="Return-date">Return date:</label>
-											<input id="return-date" type="text" class="search-form-input search-form-datepicker" placeholder="dd.mm.yyyy">
-										</div>
-									</div>
+
+											<div class="search-form-group">
+												<label for="departure-date">Departure date:</label>
+												<input id="departure-date" type="text" class="search-form-input search-form-datepicker" placeholder="dd.mm.yyyy">
+											</div>
+
+											<div class="search-form-group search-form-group-roundtrip d-flex flex-wrap  justify-content-start justify-content-sm-end justify-content-md-start">
+												<div class="order-last order-sm-1">
+													<label class="roundtrip-label">
+														<input id="roundtrip-checkbox" type="checkbox" class="roundtrip-checkbox">
+														<span class="roundtrip-checkbox-custom"></span>
+														Roundtrip
+														<i class="fa fa-caret-right"></i>
+													</label>
+												</div>
+												<div class="order-sm-2">
+													<label for="Return-date">Return date:</label>
+													<input id="return-date" type="text" class="search-form-input search-form-datepicker" placeholder="dd.mm.yyyy">
+												</div>
+											</div>
+
+
+
 									<div class="search-form-group">
 										<label for="currency">Currency</label>
 										<select class="select-custom select-currency" name="" id="currency">
