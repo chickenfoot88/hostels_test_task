@@ -14,14 +14,23 @@ $(function() {
 		dateFormat: "dd.mm.yy"
 	});
 
-	$('#roundtrip-checkbox').on('change', function() {
-		if (this.checked) {
+
+	function disableDatepicker(checkbox) {
+		if (!checkbox.checked) {
 			$("#return-date" ).datepicker( "option", "disabled", true );
 			$("#return-date" ).val("");
 		} else {
 			$("#return-date" ).datepicker( "option", "disabled", false );
 		}
-	})
+	};
+
+	$(document).ready(function() {
+		disableDatepicker($('#roundtrip-checkbox'));
+	});
+
+	$('#roundtrip-checkbox').on('change', function() {
+		disableDatepicker(this);
+	});
 
 	$('.search-form-change_btn').on('click', function() {
 		var arrivalCity = $('#arrival-city').val();
@@ -36,5 +45,30 @@ $(function() {
 		}
 	})
 
+	// mobile menu
+	$(".sf-menu").after('<div id="my-menu">');
+	$(".sf-menu").clone().appendTo("#my-menu");
+	$("#my-menu").find("*").attr("style", "");
+	$("#my-menu").find("ul").removeClass("sf-menu").removeClass('top-menu');
+
+	$("#my-menu").mmenu({
+		extensions : ['theme-white', 'effect-menu-slide', 'pagedim-black' ],
+			navbar: {
+				title: "Меню"
+			}
+	});
+
+	var mmenuApi = 	$("#my-menu").data("mmenu");
+
+	mmenuApi.bind("open:finish", function() {
+		$(".hamburger").addClass("is-active");
+	}).bind("close:before", function() {
+		$(".hamburger").removeClass("is-active");
+
+	});
+
+	$('ul.sf-menu').superfish({
+		animation:   {opacity:'show',height:'show'},
+	});
 
 });

@@ -26,7 +26,7 @@ gulp.task('browser-sync', function() {
 });
 
 gulp.task('styles', function() {
-	return gulp.src('app/less/main.less')
+	return gulp.src('app/less/*.less')
 	.pipe(less({ outputStyle: 'expand' }).on("error", notify.onError()))
 	.pipe(rename({ suffix: '.min', prefix : '' }))
 	.pipe(autoprefixer(['last 15 versions']))
@@ -43,6 +43,9 @@ gulp.task('js', function() {
 		'app/libs/jqueryUi/jquery-ui.min.js',
 		'app/libs/bootstrap/popper.min.js',
 		'app/libs/bootstrap/bootstrap.bundle.min.js',
+		'app/libs/superfish/dist/js/hoverIntent.js',
+		'app/libs/superfish/dist/js/superfish.min.js',
+		'app/libs/mmenu/dist/jquery.mmenu.all.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))

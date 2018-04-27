@@ -29,121 +29,137 @@
 <body>
 
 	<!-- Custom HTML -->
-
-	<div class="top-line-wrapper">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-12">
-					<nav class="top-line navbar navbar-expand-md">
-						<div class="collapse navbar-collapse">
-							<ul class="top-menu navbar-nav">
-								<li class="nav-item"><a href="#">Search tickets</a></li>
-								<li class="nav-item"><a href="#">Sapsan</a></li>
-								<li class="nav-item"><a href="#">Allegro</a></li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" id="trans-siberian" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trans-siberian</a>
-									<div class="dropdown-menu" aria-labelledby="trans-siberian">
-										<a class="dropdown-item" href="#">Menu link 1</a>
-										<a class="dropdown-item" href="#">Menu link 2</a>
-										<a class="dropdown-item" href="#">Menu link 3</a>
-									</div></li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" id="faq" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Faq</a>
-									<div class="dropdown-menu" aria-labelledby="faq">
-										<a class="dropdown-item" href="#">Menu link 1</a>
-										<a class="dropdown-item" href="#">Menu link 2</a>
-										<a class="dropdown-item" href="#">Menu link 3</a>
-									</div></li>
-								<li class="nav-item dropdown">
-									 <a class="nav-link dropdown-toggle" href="#" id="tickets-guide" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tickets guide</a>
-									<div class="dropdown-menu" aria-labelledby="tickets-guide">
-										<a class="dropdown-item" href="#">Group travel</a>
-										<a class="dropdown-item" href="#">Ticket types</a>
-										<a class="dropdown-item" href="#">Child policy</a>
-										<a class="dropdown-item" href="#">Change ticket request</a>
-										<a class="dropdown-item" href="#">Cancel tickets</a>
-									</div>
-								</li>
-								<li class="nav-item dropdown">
-									<a class="nav-link dropdown-toggle" href="#" id="contact" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact us</a>
-									<div class="dropdown-menu" aria-labelledby="contact">
-										<a class="dropdown-item" href="#">Menu link 1</a>
-										<a class="dropdown-item" href="#">Menu link 2</a>
-										<a class="dropdown-item" href="#">Menu link 3</a>
-									</div>
-								</li>
-							</ul>
+	<div id="my-page">
+		<div class="top-line-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-12 d-flex">
+							<div class="top-line">
+								<a href="#my-menu" class="hamburger hamburger--emphatic">
+									<span class="hamburger-box">
+										<span class="hamburger-inner"></span>
+									</span>
+								</a>
+								<nav>
+									<ul class="top-menu sf-menu">
+										<li><a href="#">Search tickets</a></li>
+										<li><a href="#">Sapsan</a></li>
+										<li><a href="#">Allegro</a></li>
+										<li>
+											<a class="" href="#">Trans-siberian</a>
+											<ul>
+												<li><a href="#">Menu link 1</a></li>
+												<li><a href="#">Menu link 2</a></li>
+												<li><a href="#">Menu link 3</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Faq</a>
+											<ul>
+												<li><a href="#">Menu link 1</a></li>
+												<li><a href="#">Menu link 2</a></li>
+												<li><a href="#">Menu link 3</a></li>
+											</ul>
+										</li>
+										<li>
+											<a class="" href="#">Tickets guide</a>
+											<ul>
+												<li><a href="#">Group travel</a></li>
+												<li><a href="#">Ticket types</a></li>
+												<li><a href="#">Child policy</a></li>
+												<li><a href="#">Change ticket request</a></li>
+												<li><a href="#">Cancel tickets</a></li>
+											</ul>
+										</li>
+										<li>
+											<a href="#">Contact us</a>
+											<ul>
+												<li><a href="#">Menu link 1</a></li>
+												<li><a href="#">Menu link 2</a></li>
+												<li><a href="#">Menu link 3</a></li>
+											</ul>
+										</li>
+									</ul>
+								</nav>
+							</div>
+							<div class="sign-in-link">
+								<a href="#"><i class="fa fa-user"></i>Sign in</a>
+							</div>
 						</div>
-						<div class="sign-in-link">
-							<a href="#"><i class="fa fa-user"></i>Sign in</a>
-						</div>
-					</nav>
+					</div>
 				</div>
 			</div>
-		</div>
-	</div>
-	<div class="search-block-wrapper">
-		<div class="container">
-			<div class="row">
-				<div class="col-xl-12">
-					<h1>Russian Train Tickets</h1>
-				</div>
-				<div class="col-xl-12">
-					<form action="" id="search-form" class="search-form">
-						<div class="form-group-wrapper">
-							<div class="search-form-group">
-							  <label for="departure-city">Departure city:</label>
-							  <input id="departure-city" type="text" class="search-form-input" placeholder="Type city name">
-								<p class="help-block">Ex: <a href="" class="example-city">St.Petersburg</a><b>,</b><a href="" class="example-city">Moscow</a></p>
-							</div>
-							<div class="search-form-change">
-								<button class="search-form-change_btn" type="button"></button>
-							</div>
-							<div class="search-form-group">
-								<label for="arrival-city">Arrival city:</label>
-								<input id="arrival-city" type="text" class="search-form-input" placeholder="Type city name">
-								<p class="help-block">Ex: <a href="" class="example-city">St.Petersburg</a><b>,</b><a href="" class="example-city">Moscow</a></p>
-							</div>
+		<div class="search-block-wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col-xl-12">
+							<h1>Russian Train Tickets</h1>
 						</div>
-						<div class="form-group-wrapper">
-							<div class="search-form-group">
-								<label for="departure-date">Departure date:</label>
-								<input id="departure-date" type="text" class="search-form-input search-form-datepicker" placeholder="dd.mm.yyyy">
-							</div>
-							<div class="search-form-group search-form-group-roundtrip">
-								<div>
-									<label class="roundtrip-label">
-										<input id="roundtrip-checkbox" type="checkbox" class="roundtrip-checkbox">
-										<span class="roundtrip-checkbox-custom"></span>
-										Roundtrip
-										<i class="fa fa-caret-right"></i>
-									</label>
+					</div>
+					<div class="row">
+						<div class="col-xl-12">
+							<form action="" id="search-form" class="search-form">
+								<div class="row no-gutters">
+									<div class="col-12 col-sm-11 col-md">
+										<div class="search-form-group">
+											<label for="departure-city">Departure city:</label>
+											<input id="departure-city" type="text" class="search-form-input" placeholder="Type city name">
+											<p class="help-block">Ex: <a href="" class="example-city">St.Petersburg</a><b>,</b><a href="" class="example-city">Moscow</a></p>
+										</div>
+									</div>
+									<div class="col-12 col-sm-1 d-flex">
+										<div class="search-form-change justify-content-end justify-content-md-center">
+											<button class="search-form-change_btn" type="button"></button>
+										</div>
+									</div>
+									<div class="col-12 col-sm-11 col-md">
+										<div class="search-form-group">
+											<label for="arrival-city">Arrival city:</label>
+											<input id="arrival-city" type="text" class="search-form-input" placeholder="Type city name">
+											<p class="help-block">Ex: <a href="" class="example-city">St.Petersburg</a><b>,</b><a href="" class="example-city">Moscow</a></p>
+										</div>
+									</div>
 								</div>
-								<div>
-									<label for="Return-date">Return date:</label>
-									<input id="return-date" type="text" class="search-form-input search-form-datepicker" placeholder="dd.mm.yyyy">
+								<div class="form-group-wrapper">
+									<div class="search-form-group">
+										<label for="departure-date">Departure date:</label>
+										<input id="departure-date" type="text" class="search-form-input search-form-datepicker" placeholder="dd.mm.yyyy">
+									</div>
+									<div class="search-form-group search-form-group-roundtrip">
+										<div>
+											<label class="roundtrip-label">
+												<input id="roundtrip-checkbox" type="checkbox" class="roundtrip-checkbox">
+												<span class="roundtrip-checkbox-custom"></span>
+												Roundtrip
+												<i class="fa fa-caret-right"></i>
+											</label>
+										</div>
+										<div>
+											<label for="Return-date">Return date:</label>
+											<input id="return-date" type="text" class="search-form-input search-form-datepicker" placeholder="dd.mm.yyyy">
+										</div>
+									</div>
+									<div class="search-form-group">
+										<label for="currency">Currency</label>
+										<select class="select-custom select-currency" name="" id="currency">
+											<option value="usd">USD</option>
+											<option value="rub">RUB</option>
+											<option value="eur">GBR</option>
+											<option value="eur">EUR</option>
+											<option value="eur">CHF</option>
+										</select>
+									</div>
+									<div class="search-form-group search-form-group-flex">
+										<button type="button" class="search-btn"><img src="img/search.png" alt="Search">Search</button>
+									</div>
 								</div>
-							</div>
-							<div class="search-form-group">
-								<label for="currency">Currency</label>
-								<select class="select-custom select-currency" name="" id="currency">
-									<option value="usd">USD</option>
-									<option value="rub">RUB</option>
-									<option value="eur">GBR</option>
-									<option value="eur">EUR</option>
-									<option value="eur">CHF</option>
-								</select>
-							</div>
-							<div class="search-form-group search-form-group-flex">
-								<button type="button" class="search-btn"><img src="img/search.png" alt="Search">Search</button>
-							</div>
+							</form>
 						</div>
-					</form>
+					</div>
 				</div>
 			</div>
-		</div>
+		<div class="container"></div>
 	</div>
-	<div class="container"></div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="js/scripts.min.js"></script>
 
