@@ -23,6 +23,7 @@ body {
 	font-family: @default-font;
 	overflow-x: hidden;
 	color: #fff;
+	background: #0085c5;
 	input, textarea {
 			border: #666 1px solid;
 			outline: none;
@@ -158,10 +159,10 @@ button {
 }
 
 .sign-in-link {
-	display: flex;
 	align-items: center;
-	min-width: 66px;
+	min-width: 70px;
 	height: 40px;
+
 	.svg-inline--fa {
 		margin-right: 10px;
 	}
@@ -170,7 +171,30 @@ button {
 		display: block;
 		color: @text-blue;
 		text-decoration: underline;
-		transition: color .2s ease
+		height: 100%;
+		line-height: 40px;
+		display: block;
+		position: relative;
+
+		&::before {
+			content: '';
+			display: block;
+			background-image: url('../img/user.png');
+			background-repeat: no-repeat;
+			background-position: 0 center;
+			width: 12px;
+			height: 15px;
+			position: absolute;
+			padding-left: 12px;
+			top: 13px;
+			left: -15px;
+		}
+
+		&:hover {
+			&::before {
+				background-position: -12px center;
+			}
+		}
 	}
 
 	a:hover {
@@ -178,10 +202,10 @@ button {
 	}
 }
 
+
 //search block
 .search-block-wrapper {
 	padding: 50px 0 55px;
-	background: #0085c5;
 }
 
 h1 {
@@ -208,20 +232,19 @@ h1 {
 		justify-content: center;
 		width: 100%;
 		&_btn {
-			width: 55px;
-			background: url('../img/change.png') no-repeat center;
+			width: 30px;
+			background: url('../img/change-btn.png') no-repeat;
+			background-position: 0 center;
 			border: none;
 			padding: 10px;
-			height: 25px;
+			height: 30px;
 			cursor: pointer;
-			transition: background-image .1s ease
-		}
+			transition: background-image .1s ease;
 
-		&:hover,
-		&:active,
-		&:focus {
-			.search-form-change_btn {
-				background-image: url('../img/change-active.png');
+			&:hover,
+			&:active,
+			&:focus {
+				background-position: -30px center;
 			}
 		}
 	}
@@ -291,6 +314,32 @@ h1 {
 	.search-form-datepicker {
 		max-width: 170px;
 		width: 100%;
+		position: relative;
+
+		&-wrapper {
+			position: relative;
+			display: inline-block;
+			&::before {
+				content: '';
+				background-image: url('../img/datepicker.png');
+				background-position: 0 center;
+				background-repeat: no-repeat;
+				width: 26px;
+				height: 26px;
+				display: block;
+				float: right;
+				z-index: 1;
+				position: absolute;
+				top: 11px;
+				right: 15px;
+			}
+
+			&.disabled {
+				&::before {
+					background-position: -26px center;
+				}
+			}
+		}
 	}
 }
 
@@ -320,6 +369,7 @@ h1 {
 			right: -8px;
 			color: lighten(@dark-blue, 5%);
 			font-size: 24px;
+			top: 6px;
 		}
 
 		.roundtrip-checkbox {
@@ -481,7 +531,7 @@ h1 {
 	.mm-btn::before {
 		border-color: #fff;
 	}
-	
+
 	.mm-navbar .mm-navbar__title {
 		color: #fff;
 	}

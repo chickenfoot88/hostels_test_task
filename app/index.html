@@ -13,13 +13,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<!-- Template Basic Images Start -->
-	<meta property="og:image" content="path/to/image.jpg">
+	<meta property="og:image" content="img/og/og-image.jpg">
 	<link rel="icon" href="img/favicon/favicon.ico">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+
+
 	<!-- Template Basic Images End -->
 
 	<!-- Custom Browsers Color Start -->
-	<meta name="theme-color" content="#000">
+	<meta name="theme-color" content="#ffffff">
 	<!-- Custom Browsers Color End -->
 
 	<link rel="stylesheet" href="css/main.min.css">
@@ -61,7 +68,7 @@
 												<li><a href="#">Menu link 3</a></li>
 											</ul>
 										</li>
-										<li>
+										<li class="sf">
 											<a class="" href="#">Tickets guide</a>
 											<ul>
 												<li><a href="#">Group travel</a></li>
@@ -83,7 +90,7 @@
 								</nav>
 							</div>
 							<div class="sign-in-link">
-								<a href="#"><i class="fa fa-user"></i>Sign in</a>
+								<a href="#">Sign in</a>
 							</div>
 						</div>
 					</div>
@@ -121,29 +128,28 @@
 									</div>
 								</div>
 								<div class="form-group-wrapper">
-
-											<div class="search-form-group">
-												<label for="departure-date">Departure date:</label>
-												<input id="departure-date" type="text" class="search-form-input search-form-datepicker" placeholder="dd.mm.yyyy">
+									<div class="search-form-group">
+										<label for="departure-date">Departure date:</label>
+										<div class="search-form-datepicker-wrapper">
+											<input id="departure-date" type="text" class="search-form-input search-form-datepicker" placeholder="dd.mm.yyyy">
+										</div>
+									</div>
+									<div class="search-form-group search-form-group-roundtrip d-flex flex-wrap  justify-content-start justify-content-sm-end justify-content-md-start">
+										<div class="order-last order-sm-1">
+											<label class="roundtrip-label">
+												<input id="roundtrip-checkbox" type="checkbox" class="roundtrip-checkbox">
+												<span class="roundtrip-checkbox-custom"></span>
+												Roundtrip
+												<i class="fa fa-caret-right"></i>
+											</label>
+										</div>
+										<div class="order-sm-2">
+											<label for="Return-date">Return date:</label>
+											<div class="search-form-datepicker-wrapper search-form-datepicker-wrapper-return">
+												<input id="return-date" type="text" class="search-form-input search-form-datepicker" placeholder="dd.mm.yyyy">
 											</div>
-
-											<div class="search-form-group search-form-group-roundtrip d-flex flex-wrap  justify-content-start justify-content-sm-end justify-content-md-start">
-												<div class="order-last order-sm-1">
-													<label class="roundtrip-label">
-														<input id="roundtrip-checkbox" type="checkbox" class="roundtrip-checkbox">
-														<span class="roundtrip-checkbox-custom"></span>
-														Roundtrip
-														<i class="fa fa-caret-right"></i>
-													</label>
-												</div>
-												<div class="order-sm-2">
-													<label for="Return-date">Return date:</label>
-													<input id="return-date" type="text" class="search-form-input search-form-datepicker" placeholder="dd.mm.yyyy">
-												</div>
-											</div>
-
-
-
+										</div>
+									</div>
 									<div class="search-form-group">
 										<label for="currency">Currency</label>
 										<select class="select-custom select-currency" name="" id="currency">
