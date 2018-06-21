@@ -1,6 +1,6 @@
 # Тестовое задание от компании hotels.ru #
 #### Форма заказа железнодорожных билетов. ####
-Сайт проекта: [Russian Train Tickets](http://adel-ismagilov.ru/projects/tests/hotelsru/)
+Сайт проекта: [Russian Train Tickets](http://adel-ismagilov.ru/tests/hotelsru/)
 ##### В работе использовались: #####
 1. Task manager: [Gulp](https://gulpjs.com/)
 2. CSS preproccessor: [LESS](http://lesscss.org/)
